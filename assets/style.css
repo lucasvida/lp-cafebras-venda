@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-principal: #000;
+    --cor-secundaria: #aaaaaa;
+    --cor-dourada: #b97d04;
+    --font-size-s: 0.75em;
+    --font-size-m: 1.2em;
+    --font-size-l: 1.5em;
+    --font-size-xl: 2em;
+    --font-size-xxl: 2em;
+}
+
+@layer reset-css{
+
+
+/* RESET CSS */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    list-style: none;
+    outline: none;
+    font-family: var(--font-principal-lp);
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+}
+
+@layer css-principal{
+    body{
+        background-color: #000;
+        color:#FFF;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .container{
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .cor-secundaria{
+        color: var(--cor-secundaria);
+    }
+
+    .flex{
+        display: flex;
+    }
+
+    .flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-column-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-h2{
+        font-size: 2.2em;
+        line-height: 1.2em;
+    }
+
+    .title-h3{
+        font-size: 1.7em;
+        line-height: 1.2em;
+    }
+
+    .padding-base{
+        padding: 20px;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+    .bold{
+        font-weight: bolder;
+    }
+    .sublinhado{
+        text-decoration: underline;
+    }
+
+    .margin-top-base{
+        margin-top: 25px;
+    }
+
+    .cor-dourada{
+        color: var(--cor-dourada);
+    }
+}
+
+@layer animacoes{
+
+    @keyframes smooth {
+        from{
+            opacity: 0.5;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+
+.smooth{
+    animation: smooth alternate 1s;
+}
+
+}
+
+
+@layer desktop{
+
+    @layer css-principal-desktop{
+        .mobile{
+            display: none;
+        }
+
+        .bloco-direita{
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .bloco-esquerda{
+            padding: 20px;
+            margin-top: 25px;
+        }
+    }
+
+    @layer primeira-dobra{
+
+        .divisor{
+            width: 100%;
+            height: 10px;
+            margin-top: -8px;
+            background: rgb(185,125,4);
+            background: linear-gradient(16deg, rgba(185,125,4,1) 30%, rgba(255,255,255,1) 75%, rgb(177, 119, 4) 100%);
+        }
+
+    }
+
+    @layer segunda-dobra{
+
+        .lp-cafebras-segunda-dobra {
+            background-image: url("./img/textura.png");
+            background-repeat: repeat;
+            width: 100%;
+        }
+
+        .lp-cafebras-segunda-dobra .bloco-esquerda{
+            width: 60%;
+        }
+
+        .lp-cafebras-segunda-dobra .bloco-direita{
+            width: 40%;
+        }
+
+
+        .lp-cafebras-segunda-dobra img{
+            width: 100%;
+        }
+    }
+
+    @layer terceira-dobra{
+
+       .lp-cafebras-terceira-dobra{
+        background-image: url("./img/bg-terceira-dobra.png");
+        background-size: cover;
+       }
+
+       .dobra-header{
+        padding-top: 50px;
+       }
+
+       .lp-cafebras-terceira-dobra .container{
+        width: 65%;
+       }
+
+       .lp-cafebras-terceira-dobra .title-h3{
+        margin: 0 auto;
+        width: 70%;
+       }
+
+       .cards img{
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+       }
+
+       
+    }
+
+    @layer quarta-dobra{
+
+        .lp-cafebras-quarta-dobra{
+         background-image: url("./img/bg-quarta-dobra-lp-lancamento-cafebras.png");
+         background-size: cover;
+         width: 100%;
+         min-height: 650px;
+        }
+
+        .lp-cafebras-quarta-dobra .container{
+            width: 95%;
+        }
+
+        .lp-cafebras-quarta-dobra img{
+            width: 100%;
+        }
+
+        .lp-cafebras-quarta-dobra .flex-column{
+            width: 50%;
+            min-height: 600px;
+            padding: 5px;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+
+        .descricao-fabiano{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+            padding: 5px;
+            line-height: 1.5em;
+            font-size: 1em;
+            
+        }
+
+        .divisor-produtor{
+            width: 100%;
+            height: 5px;
+            border-radius: 30px;
+            border:none;
+            background-color: #333333;
+        }
+
+        .sobre-produtor{
+            display: flex;
+            justify-content: center;
+        }
+
+        .sobre-produtor img{
+            width: 100%;
+        }
+        
+        .blocos-informacoes{
+            display: flex;
+            align-items: center;
+            width: 70%;
+            padding: 10px 25px 10px 25px;
+            margin-top: 10px;
+            border: 5px solid #2D2D2D;
+            background-color: #1C1C1C;
+            border-radius: 15px;
+            font-size: 1em;
+            line-height: 1.2em;
+            text-align: left;
+            transition: 1s; 
+        }
+
+        .blocos-informacoes:hover{
+            scale: 1.1;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .blocos-informacoes:not(:hover){
+            scale: 1;
+            transition: 1s;
+        } 
+
+        .icone-informacoes img{
+            width: 30px;
+            height: 30px;
+            margin-right: 25px;
+        }
+
+        .sombra{
+            box-shadow: 0px 0px 0px rgba(1, 10, 46, 0.2),
+            0px 1px 6px rgba(1, 10, 46, 0.2),
+            0px 2px 12px rgba(1, 10, 46, 0.2),
+            0px 3px 18px rgba(1, 10, 46, 0.2),
+            0px 4px 24px rgba(1, 10, 46, 0.2),
+            0px 5px 30px rgba(1, 10, 46, 0.2);
+        }
+ }
+
+
+    @layer sexta-dobra{
+
+        .escolha-de-cafes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        .lp-escolha-o-cafe{
+            background-color: #1C1C1C;
+            color: #ffffff;
+        }
+    
+        .header-tabela-preco{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 25px;
+            text-align: center;
+        }
+    
+        .tabela-precos{
+           width: 70%;
+           padding: 25px;
+        }
+    
+        .tabela-precos img{
+            width: 100%;
+         }
+    
+        .cta-comprar{
+            width: 15%;
+            margin-top: -100px;
+            height: 450px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+         }
+    
+         .btn-compra{
+            padding: 20px;
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #19A0FC;
+            border: none;
+            border-radius: 25px;
+            width: 225px;
+            cursor: pointer;
+         }
+    
+         .container-p{
+            padding: 5px;
+            width: 75%;
+         }
+
+         .escolha-de-cafes-mobile{
+            display: none;
+         }
+
+    }
+
+
+    @layer tire-suas-duvidas{
+
+        .tire-suas-duvidas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 85px;
+            margin-top: -5px;
+            background-color: #2D2D2D;
+            text-align: center;
+         }
+    
+         .btn-whatsapp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .btn-whatsapp > div {
+           margin-right: 10px;
+        }
+    
+        .btn-whatsapp  {
+            font-size: 1.3em;
+         }
+    
+    
+        .btn-whatsapp a{
+            color:#3fc250;
+        }
+     }
+
+}
+
+@layer slider-fotos{
+    .slider-fotos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        min-height: 550px;
+        padding: 20px;
+        background-color: #1C1C1C;
+        border-radius: 50px;
+        border: 5px solid #2D2D2D;
+     }
+
+     .imagens-slider-fotos img {
+        border-radius: 35px;
+        height: 500px;
+     }
+
+     .controle-slider-fotos{
+        margin-top: 25px;
+     }
+
+     .controle-slider-fotos button{
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+     }
+}
+
+@layer mobile{
+
+    @media screen and (max-width:480px){
+
+        .container{
+            width: 95%;
+        }
+    
+        .mobile{
+            display: block;
+        }
+    
+        .desktop{
+            display: none;
+        }
+        
+        .title-h2{
+            font-size: 1.5em;
+            line-height: 1.2em;
+        }
+    
+        .title-h3{
+            font-size: 1.2em;
+            line-height: 1.2em;
+        }
+    
+        @layer segunda-dobra{
+    
+            .lp-cafebras-segunda-dobra  .container {
+                display: flex;
+                flex-direction: column;
+    
+            }
+    
+            .lp-cafebras-segunda-dobra .bloco-esquerda{
+                width: 95%;
+            }
+    
+            .lp-cafebras-segunda-dobra .bloco-direita{
+                width: 95%;
+            }
+    
+        }
+
+        @layer terceira-dobra{
+
+            .lp-cafebras-terceira-dobra{
+             background-image: url("./img/bg-terceira-dobra.png");
+             background-size: cover;
+            }
+     
+            .dobra-header{
+             padding-top: 50px;
+            }
+     
+            .lp-cafebras-terceira-dobra .container{
+             width: 65%;
+            }
+     
+            .lp-cafebras-terceira-dobra .title-h3{
+             margin: 0 auto;
+             width: 95%;
+            }
+
+            .lp-cafebras-terceira-dobra .title-h2{
+                margin: 0 auto;
+                width: 95%;
+               }
+
+            .cards{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+    
+            .cards img{
+                width: 100%;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+     
+            
+         }
+
+        @layer quarta-dobra{
+
+            .lp-cafebras-quarta-dobra {
+                background-image: url("./img/bg-quarta-dobra-lp-lancamento-cafebras-mob.png");
+                background-size: cover;
+                width: 100%;
+                
+              }
+
+            .lp-cafebras-quarta-dobra .flex-center{
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+            }
+
+            .lp-cafebras-quarta-dobra .flex-column{
+                width: 100%;
+                min-height: 100px;
+                justify-content: flex-start;
+            }
+
+             .flex-column{
+                width: 100%;
+            }
+    
+            .descricao-fabiano{
+                margin-top: -45px;
+                width: 90%;
+
+                
+                
+            }
+
+    
+        }
+    
+    
+        @layer sexta-dobra{
+    
+            .conteudo-todas-edicoes{
+                   
+                flex-direction: column-reverse;
+               }
+    
+               .conteudo-direita-edicoes{
+                width: 100%;
+                padding: 0px;
+                
+            }
+            
+            .conteudo-esquerda-edicoes{
+                width: 100%;
+                padding: 0px;
+                
+            }
+    
+            
+                .edicao-limitada{
+                    width: 100%;
+                    margin-top: -75px;
+                }
+            
+                .container-p{
+                    padding: 5px;
+                    width: 100%;
+                 }
+    
+                 .cta-comprar{
+                    width: 100%;
+                    padding: 0px;
+                    margin-top: 0px;
+                 }
+    
+            
+    
+                 .escolha-de-cafes-mobile{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 25px;
+                    width: 85%;
+                    
+                 }
+    
+                 .escolha-de-cafes-mobile img{
+                    width: 100%;
+                 }
+    
+                 .btn-compra, .produto{
+                    padding: 10px;
+                    margin-top: 25px;
+                 }
+    
+                 .produto{
+                    margin-top: 10px;
+                 }
+    
+                 .space{
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                 }
+    
+                 hr{
+                    width: 100%;
+                 }
+    
+        }
+
+        @layer slider-fotos{
+            .slider-fotos{
+                margin-top: -40px;
+                width: 90%;
+                min-height: 0px;
+                padding: 15px;
+             }
+        
+             .imagens-slider-fotos img {
+                border-radius: 35px;
+                width: 100%;
+                height: 385px;
+             }
+        
+        }
+    
+    
+       
+    }
+}
